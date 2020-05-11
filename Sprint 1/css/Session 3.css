@@ -1,0 +1,21 @@
+h2.a{
+    visibility: visible;
+}
+h2.b{
+    visibility: hidden;    /*hides content by leaving space behind*/
+}
+h2.c{
+    display: none;         /*hides content without taking space*/
+}
+.firstdiv{
+    background-color: lightgreen;
+    width: 200px;
+    margin: 10px;
+    border: 10px dashed black;
+    padding: 10px;
+}
+.over{
+    width: 30%;
+    height: 200px;
+    overflow: auto;     /*overflow: hidden/visible/scroll/auto*/
+}
