@@ -1,0 +1,114 @@
+.flex-container{
+    display: flex;
+    background: linear-gradient(50deg,red ,blue 700px);
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.flex-container div{
+    background: radial-gradient(circle at top right,white,pink);
+    margin: 10px;
+    padding: 10px;
+}
+.image{
+    margin-top: 50px;
+    background-image: linear-gradient(to top,rgba(245,246,252,0.52),rgba(117,19,93,0.73)), 
+    url(../images/w3.jpg);
+    border: 2px solid black;
+    width:40%;
+    height: 530px;
+    background-size: cover;
+    color: white;
+}
+div.a{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: red;
+    margin: 20px auto;
+    padding: 10px;
+}
+div.a:hover{
+    width: 200px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: green;
+    color: white;
+    transform: rotate(20deg);
+    margin: 20px auto;
+    padding: 10px;  
+    cursor: pointer;  
+    transition: background-color 2s ease-out,color 2s,width 2s,height 2s;
+}
+div.b{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: yellow;
+    transform: skewX(20deg);
+    margin: 20px auto;
+    padding: 10px;
+}
+div.b:hover{
+    animation:  bounceIn 2s ease-in-out 3s 2;
+}
+div.c{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: yellow;
+    transform: scale(0.7);
+    margin: 20px auto;
+    padding: 10px;
+}
+div.d{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: yellow;
+    transform-origin: 0 0;
+    margin: 20px auto;
+    padding: 10px;
+}
+div.d:hover{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    transform-origin: 0 0;
+    background-color: yellow;
+    transform: matrix(2,0,0,3,10,0);
+    margin: 20px auto;
+    padding: 10px;
+}
+div.e{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: yellow;
+    transform: translate(100px,5px);
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.ani{
+    display: flex;
+    animation: around 4s linear infinite;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    font-size: 25px;
+    color: orangered;
+    background: radial-gradient(circle at top right,white,rgb(33, 204, 216));
+    margin: 10px;
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+}
+@keyframes around {
+    0%  { left: 0; top: 0;}
+    25% { left: 240px; top: 0;}
+    50% { left: 240px; top: 140px;}
+    75% { left: 0; top: 140px;}
+    100%{ left: 0; top: 0;}
+  }
