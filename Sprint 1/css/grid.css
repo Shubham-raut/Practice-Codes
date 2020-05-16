@@ -1,0 +1,119 @@
+
+.container {
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-template-rows: 200px 200px 200px;
+	grid-gap: 25px;
+}
+.item {
+	display: grid;
+	border: 3px solid black;
+	background: pink;
+	grid-gap: 15px;
+}
+.first {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+.second .fifth .third .eight{
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+.forth{
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 2fr 3fr;
+}
+.sixth{
+	grid-template-columns: minmax(50px, 3fr) 9fr;
+}
+.seventh{
+	grid-template-columns: minmax(5px, 3fr) 9fr;
+	grid-template-columns: minmax(auto, 50%) 9fr;
+	grid-template-columns: minmax(50px, auto) 9fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+.eight{
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-auto-flow: column;
+	place-content: center center;
+}
+.nine{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+.item-1{
+	display: grid;
+	border: 2px solid black;
+	background: skyblue;
+}
+.item-11{
+	display: grid;
+	border: 2px solid black;
+	background: skyblue;
+	place-content: center;
+}
+.item-12{
+	display: block;
+	border: 2px solid black;
+	background: skyblue;
+	width: 50px;
+	height: 40px;
+	place-self: center;
+}
+.mix-1{
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+.mix-2{
+	grid-column: 3 /5;
+}
+.mix-3{
+	grid-area: 1 / 2 / 3 / 5;
+}
+.mix-4{
+	grid-column: 1 / span 2;
+}
+.mix-5{
+	grid-column: span 2 / 5;
+}
+.mix-6{
+	grid-column: span 2 / 5;
+}
+.mix-7{
+	grid-area: 1 / 1 / 4 / 3;
+}
+.mix-8{
+	grid-area: 1 / 3 / 4 / 5;
+}
+
+
+
+
+header {
+  grid-area: header;
+  background-color: #fed330;
+  padding: 20px;
+}
+article {
+  grid-area: content;
+  background-color: #20bf6b;
+  padding: 20px;
+}
+aside {
+  grid-area: sidebar;
+  background-color: #45aaf2;
+}
+footer {
+  padding: 20px;
+  grid-area: footer;
+  background-color: #fd9644;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header  header header"
+    "content content . sidebar"
+    ". footer  footer .";
+}
