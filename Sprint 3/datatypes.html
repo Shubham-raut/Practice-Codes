@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript - DataTypes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            /*let i=0;
+            setInterval(()=>{
+                document.write(i+", ");
+                i++;
+            }, 500);*/
+            
+            //Type 1 - Imutables
+            let a=10;  //number
+            let b; //undefinrd
+            let c="hi";
+            let d=true;
+            let e =null;
+            document.write(a," ",b," ",c," ",d," ",e);
+
+            //type 2 - Referance
+            let newVer1 = [15, 16, 17];
+            let newVer2 = {
+                "value1": 10,
+                "value2": 20,
+                "value3": 30
+            }
+            let newVer3 = () => {
+                document.write("\n",newVer1);
+                document.write("\n",newVer2.value1," ",newVer2.value2," ",newVer2.value3,);
+            }
+            newVer3();
+
+        </script>
+    </body>
+</html>
