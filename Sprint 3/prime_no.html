@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript - Prime No.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+
+            let isPrime = (num) =>{
+                for(let j = 2; j <= num/2; j++){
+                    if(num % j == 0){
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // let findPrime = (end, start=2) => {
+            //     for(let i = start; i<end; i++){
+            //         if(isPrime(i)){
+            //             console.log(i);
+            //         }
+            //     }
+            // }
+            
+            let findPrime = (start, end, skipS, skipE) => {
+                for(let i = start; i<end; i++){
+                    if(!(i>=skipS && i<=skipE)){
+                        if(isPrime(i)){
+                            console.log(i);
+                        }
+                    }
+                }
+            }
+            
+        </script>
+    </body>
+</html>
