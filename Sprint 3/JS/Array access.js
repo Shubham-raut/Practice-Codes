@@ -51,10 +51,12 @@
 // console.log("Last found " + name + " at position " + lastPos); 
 
 // //join() and toString() convert array to String.
-// var names = ["CSS", "Mike", "HTML", "SQL", "CSS", "Mike", "Java"]; 
+var names = ["CSS", "Mike", "HTML", "SQL", "CSS", "Mike", "Java"]; 
 
-// var namestr = names.join(); 
-// console.log(namestr); 
+var namestr = names.join(); 
+console.log(namestr); 
+var namestr = names.join('...'); 
+console.log(namestr); 
 
 // namestr = names.toString(); 
 // console.log(namestr);
@@ -71,8 +73,8 @@
 
 
 //splice - it breaks array
-var thirdArray = ["M","C","T","A","D","E","J"]; 
-var secondArray = thirdArray.splice(3,3); 
-var firstArray = thirdArray; 
-console.log(secondArray); 
-console.log(firstArray); 
+// var thirdArray = ["M","C","T","A","D","E","J"]; 
+// var secondArray = thirdArray.splice(3,3); 
+// var firstArray = thirdArray; 
+// console.log(secondArray); 
+// console.log(firstArray); 
