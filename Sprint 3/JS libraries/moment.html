@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQuery and AJAX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script src="moment-2.27.0.min.js"></script>
+    <script>
+        // const moment = require('moment');
+        const now = moment();
+
+        console.log(now.format());
+        console.log(now.format('dddd'));
+        console.log(now.format('MMMM-Do-YYYY'));
+        console.log(now.format('dddd, MMMM Do YYYY [at] h:m A'));
+
+        const then = moment('1984-08-21');
+        console.log(then.format('Do [of] MMMM, YYYY'));
+
+        // Date/Time Manipulations
+        console.log(now.add(5, 'years').subtract(9, 'years').add(4, 'days').format('Do [of] MMMM, YYYY'));
+        console.log(now.add({ years: 6, days: 12 }).subtract({ years: 7 }).format('Do [of] MMMM, YYYY'));
+
+        // Comparisons
+        console.log(now.to(then));
+        console.log(then.to(now));
+        if (then.isBefore(now)) console.log('this is the future');
+
+    </script>
+    
+</body>
+
+</html>
