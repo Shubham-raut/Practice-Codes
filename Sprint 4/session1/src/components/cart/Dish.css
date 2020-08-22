@@ -1,0 +1,11 @@
+.dishContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-items: center;
+}
+.dishCard {
+    border: 2px solid red;
+    background-color: wheat;
+    width: 250px;
+}
