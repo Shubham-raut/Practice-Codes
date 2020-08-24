@@ -20,12 +20,12 @@ import Parent from './components/refs/Parent';
 function App() {
   return (
     <>
-      <p>In App.js</p>
+      {/* <p>In App.js</p>
       <Outer />
       <MyProvider>
         <ABlock />
-      </MyProvider>
-      {/* <Parent /> */}
+      </MyProvider> */}
+      <Parent />
     </>
   );
 }
