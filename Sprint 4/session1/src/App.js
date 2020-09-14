@@ -6,6 +6,8 @@ import Outer from './components/Context Simple/Outer';
 import ABlock from './components/Context states/ABlock';
 import MyProvider from './components/Context states/MyProvider';
 import Parent from './components/refs/Parent';
+import ClickCounter from './components/HOC/clickCounter';
+import HoverCounter from './components/HOC/hoverCounter';
 // import Users from './components/users/Users';
 // import Home from './components/home/Home';
 // import Restaurants from './components/restaurants/Restaurants';
@@ -25,7 +27,9 @@ function App() {
       <MyProvider>
         <ABlock />
       </MyProvider> */}
-      <Parent />
+      {/* <Parent /> */}
+      <ClickCounter name='Shubham' />
+      <HoverCounter />
     </>
   );
 }
