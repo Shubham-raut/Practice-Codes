@@ -94,12 +94,12 @@
 // var itemList = document.querySelector("#items")
 // parwnt node
 // console.log(itemList.parentNode);
-// itemList.parentNode.style.backgroundColor="#999";
+// itemList.parentNode.style.backgroundColor = "#999";
 // console.log(itemList.parentNode.parentNode.parentNode);
 
 // parentELement
 // console.log(itemList.parentElement);
-// itemList.parentElement.style.backgroundColor="#999";
+// itemList.parentElement.style.backgroundColor = "#999";
 // console.log(itemList.parentElement.parentElement.parentElement);
 
 
@@ -110,14 +110,14 @@
 // children
 // console.log(itemList.children);
 // console.log(itemList.children[1]);
-// itemList.children[1].style.backgroundColor="yellow";
+// itemList.children[1].style.backgroundColor = "yellow";
 
 // // firstchild
 // console.log(itemList.firstChild);
 
 // //firstElementChild
 // console.log(itemList.firstElementChild);
-// itemList.firstElementChild.textContent="hello 1";
+// itemList.firstElementChild.textContent = "hello 1";
 
 
 // lastchild
@@ -133,7 +133,7 @@
 
 // // //nextElementSibling
 // console.log(itemList.nextElementSibling);
-// // itemList.nextElementSibling.textContent="hello last";
+// itemList.nextElementSibling.textContent = "hello last";
 
 // previousSibling //
 // console.log(itemList.previousSibling);
@@ -145,16 +145,16 @@
 
 //####### Adding Element #######//
 // // create a div //
-// var newDiv=document.createElement('div');
+// var newDiv = document.createElement('div');
 
 // // add class 
-// newDiv.className="HEllo";
+// newDiv.className = "HEllo";
 
 // //add attr
-// newDiv.setAttribute('title','Hello Div');
+// newDiv.setAttribute('title', 'Hello Div');
 
 // // create a text node
-// var newDivText=document.createTextNode('Hello World');
+// var newDivText = document.createTextNode('Hello World');
 
 // // add text to div 
 // newDiv.appendChild(newDivText);
@@ -163,23 +163,23 @@
 // var h1 = document.querySelector('header h1');
 // console.log(newDiv);
 
-// newDiv.style.color="red";
-// newDiv.style.backgroundColor="yellow";
-// newDiv.style.float="right";
+// newDiv.style.color = "red";
+// newDiv.style.backgroundColor = "yellow";
+// newDiv.style.float = "right";
 
-// container.insertBefore(newDiv,h1);
+// container.insertBefore(newDiv, h1);
 
 
 //..............3...............//
 // Events //
-// var buttonClick=()=>{
+// var buttonClick = () => {
 //     console.log('Hi1');
 // }
 
-// var button=document.getElementById('button').addEventListener
+// var button = document.getElementById('button').addEventListener
+//     ('click', buttonClick);
+// var button=document.querySelector('#button').addEventListener
 // ('click',buttonClick);
-// // var button=document.querySelector('#button').addEventListener
-// // ('click',buttonClick);
 
 // function buttonClick(e){
 //     // console.log('Hi2');
@@ -208,11 +208,11 @@
 // }
 
 
-var button=document.getElementById('button');
-var box=document.getElementById('box');
+var button = document.getElementById('button');
+var box = document.getElementById('box');
 
 
-// button.addEventListener('click',runevent);
+button.addEventListener('click', runevent);
 // button.addEventListener('dblclick',runevent);
 // button.addEventListener('mousedown',runevent);
 // button.addEventListener('mouseup',runevent);
@@ -225,10 +225,10 @@ var box=document.getElementById('box');
 
 // box.addEventListener('mousemove',runevent);
 
-var itemInput=document.querySelector('input[type="text"]');
-var form=document.querySelector('form');
-var output=document.getElementById('output');
-var select=document.querySelector('select');
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var output = document.getElementById('output');
+var select = document.querySelector('select');
 
 // itemInput.addEventListener('keyup',runevent);
 // itemInput.addEventListener('keydown',runevent);
@@ -245,15 +245,15 @@ var select=document.querySelector('select');
 // select.addEventListener('change',runevent);
 // select.addEventListener('input',runevent);
 
-form.addEventListener('submit',runevent);
+form.addEventListener('submit', runevent);
 
-function runevent(e){
+function runevent(e) {
     e.preventDefault();
     // console.log(e.target.value);
     // box.innerHTML='<h3>'+e.target.value+'</h3>';
-    console.log('EVENT TYPE: '+e.type);
+    console.log('EVENT TYPE: ' + e.type);
     // output='<h3>MouseX: '+e.offsetX+'</h3><h3>MouseY: '+e.offsetY+'<h3>';
     // box.innerHTML=output;
     // document.body.style.backgroundColor='rgb('+e.offsetX+','+e.offsetY+',40)';
-    
+
 }
