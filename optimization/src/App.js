@@ -3,6 +3,7 @@ import { BrowserRouter, NavLink, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import './App.css';
+import LargeList from './components/LargeList/LargeList';
 
 const LazyComp = lazy(() => import('./components/LazyComp/LazyComp'));
 
@@ -46,14 +47,14 @@ class App extends React.Component {
     return (
       <div className="App">
 
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <nav>
             <NavLink exact to='/'>Home</NavLink>
             <NavLink to='/about'>About</NavLink>
             <NavLink to='/settings'>Settings</NavLink>
           </nav>
 
-          {/* lazy loading */}
+          
           <Suspense fallback={<h2>Loading...</h2>}>
             <LazyComp />
           </Suspense>
@@ -67,7 +68,9 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/settings' component={Settings} />
-        </BrowserRouter>
+        </BrowserRouter> */}
+
+        <LargeList />
 
       </div>
     );
