@@ -46,6 +46,7 @@ class App extends React.Component {
     const { Location } = this.state;
     return (
       <div className="App">
+        <h1>App Component</h1>
 
         {/* <BrowserRouter>
           <nav>

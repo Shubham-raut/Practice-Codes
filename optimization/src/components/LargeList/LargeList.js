@@ -1,5 +1,7 @@
-import React from 'react';
-import { FixedSizeList as List } from 'react-window';
+import React from "react";
+import { FixedSizeList as List } from "react-window";
+import AutoSizer from "react-virtualized-auto-sizer";
+
 import './LargeList.css';
 
 const Row = ({ index, style }) => (
@@ -10,17 +12,32 @@ const Row = ({ index, style }) => (
 
 const LargeList = () => {
 
-    return (
-        <List
+    return (<>
+        <AutoSizer>
+            {({ height, width }) => (
+                <List
+                    className="List"
+                    height={height}
+                    itemCount={1000}
+                    itemSize={35}
+                    width={width}
+                >
+                    {Row}
+                </List>
+            )}
+        </AutoSizer>
+        {/* <List
             className="List"
             height={300}
-            itemCount={200000}
-            itemSize={40}
+            itemCount={1000}
+            itemSize={35}
             width={400}
-        // layout="horizontal"
         >
             {Row}
-        </List>
+        </List> */}
+    </>
+        // layout="horizontal"
+
     );
 }
 
