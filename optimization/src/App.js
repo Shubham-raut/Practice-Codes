@@ -3,7 +3,7 @@ import { BrowserRouter, NavLink, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import './App.css';
-import LargeList from './components/LargeList/LargeList';
+import LargeList, { LazyLoadLargeList } from './components/LargeList/LargeList';
 
 const LazyComp = lazy(() => import('./components/LazyComp/LazyComp'));
 
@@ -71,7 +71,8 @@ class App extends React.Component {
           <Route path='/settings' component={Settings} />
         </BrowserRouter> */}
 
-        <LargeList />
+        {/* <LargeList /> */}
+        <LazyLoadLargeList />
 
       </div>
     );

@@ -12,3 +12,9 @@
 .ListItemEven {
     background-color: #f8f8f0;
 }
+
+.Note {
+    background-color: #ffd;
+    border-left: 0.25rem solid #ff6;
+    padding: 0.5rem;
+}
