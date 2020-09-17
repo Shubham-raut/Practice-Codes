@@ -71,8 +71,8 @@ class App extends React.Component {
           <Route path='/settings' component={Settings} />
         </BrowserRouter> */}
 
-        {/* <LargeList /> */}
-        <LazyLoadLargeList />
+        <LargeList />
+        {/* <LazyLoadLargeList /> */}
 
       </div>
     );

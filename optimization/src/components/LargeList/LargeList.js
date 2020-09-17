@@ -1,14 +1,24 @@
-import React, { createRef, Fragment, PureComponent } from "react";
+import React, { PureComponent, forwardRef } from "react";
 import { FixedSizeList as List } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import InfiniteLoader from "react-window-infinite-loader";
 import './LargeList.css';
 
 const Row = ({ index, style }) => (
-    <div className={index % 2 ? 'ListItemOdd' : 'ListItemEven'} style={style}>
+    <div className={index % 2 ? 'ListItemOdd' : 'ListItemEven'} style={style} onClick={() => console.log(index + ' Clicked')}>
         Row {index}
     </div>
 );
+
+
+function clickHandlor(event) {
+    // Your handler goes here ...
+    console.log("using outerElementType", event.type);
+}
+
+const outerElementType = forwardRef((props, ref) => (
+    <div ref={ref} onClick={clickHandlor} {...props} />
+));
 
 const LargeList = () => {
 
@@ -21,14 +31,14 @@ const LargeList = () => {
                     itemCount={1000}
                     itemSize={35}
                     width={width}
+                    // layout="horizontal"
+                    outerElementType={outerElementType}
                 >
                     {Row}
                 </List>
             )}
         </AutoSizer>
     </>
-        // layout="horizontal"
-
     );
 }
 export default LargeList;
