@@ -1,0 +1,8 @@
+    int a = 3 & 1;
+    cout << a;
+
+    mid = (high + low) / 2; //this could result in overflow(high+low)
+
+    mid=low+(hign-low)/2  //this is good
+
+    in js - mid=Math.floor(low+(hign-low)/2)
