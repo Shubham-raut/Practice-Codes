@@ -33,6 +33,14 @@ public:
         this->imag = imag;
     }
 
+    // copy constructor
+    Complex(Complex &cobj)
+    {
+        cout << "\nCopy constructor\n";
+        this->real = cobj.real;
+        this->imag = cobj.imag;
+    }
+
     ~Complex()
     {
         cout << "Destructor Called" << this << endl;
@@ -83,5 +91,8 @@ int main()
 
     // Complex obj3(5, 55, 'A');
     // obj3.display();
+
+    Complex obj4(obj);
+    obj.display();
     return 0;
 }
